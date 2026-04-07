@@ -12,12 +12,34 @@ It’s designed to demonstrate how restricted campus funds (grants, credits, sub
 
 ## Screenshots
 
-<!-- Add screenshots here later -->
+> Add/replace screenshots in `docs/screenshots/`.
 
-- Admin dashboard (treasury + approvals)
-- Node dashboard (borrow/lend + repay)
-- Merchant dashboard (payments)
-- Global ledger view
+### Onboarding & Login
+
+![Main login page](docs/screenshots/main%20login%20page.png)
+![Borrower / lender login](docs/screenshots/borrower%20lender%20login.png)
+![Register new node](docs/screenshots/register%20new%20node.png)
+![Safe keypad](docs/screenshots/safe%20keypad.png)
+
+### Admin: Approvals
+
+![New node request at admin](docs/screenshots/new%20node%20request%20at%20admin.png)
+![Admin panel](docs/screenshots/admin%20panel.png)
+
+### Lending Flow
+
+![Loan request](docs/screenshots/loan%20request.png)
+![Lending pool](docs/screenshots/lending%20pool.png)
+![Lend pool contribution](docs/screenshots/lend%20pool%20contribution.png)
+![Loan pool full: choose guarantor](docs/screenshots/loan%20pool%20full%20choose%20guarantor.png)
+![Select guarantor](docs/screenshots/select%20guarantor.png)
+![Guarantor gets request](docs/screenshots/guarantor%20gets%20request.png)
+![Loan disbursed](docs/screenshots/loan%20disbursed.png)
+![Flexible repayments](docs/screenshots/flexible%20repayments.png)
+
+### Merchant
+
+![Amount received](docs/screenshots/amount%20recieved.png)
 
 ## Tech stack
 
