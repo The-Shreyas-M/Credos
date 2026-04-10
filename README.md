@@ -126,6 +126,25 @@ This starts:
 
 The app points the phone to the same Gun relay automatically (it uses the hostname of the URL you opened).
 
+### Optional: Tailscale steps (recommended for cross-network demos)
+
+If your phone and laptop are not on the same Wi‑Fi, you can still access the laptop-hosted demo using a private mesh VPN.
+
+1. Install Tailscale on **laptop** and **phone** and sign in.
+2. Turn Tailscale **ON** on both devices.
+3. Start the demo on the laptop:
+
+```bash
+npm run dev:net
+```
+
+4. In the terminal output, Vite prints a **Network** URL. Open that URL on your phone.
+
+Notes:
+
+- Do not hard-code IPs into the repo. The URL will be different for every network/device.
+- If the phone can’t load the page, check Windows Firewall allows inbound TCP `5173` (Vite) and `8765` (Gun relay) on private networks.
+
 ## Demo accounts
 
 These exist only for demonstration:
@@ -157,3 +176,9 @@ If you want to reset the demo state:
 Gun is **peer-to-peer capable** and can replicate data across multiple peers.
 This repo defaults to a **local relay** to make the demo reliable and fully under your control.
 To demonstrate stronger decentralization, run **2+ relays** on different machines and configure clients to use multiple peers.
+
+## Hosting & persistence (Vercel note)
+
+- You *can* deploy the **frontend** to Vercel.
+- The **Gun relay** in this repo is a stateful server that writes to disk; serverless platforms like Vercel do not provide reliable long-lived disk/network state for this kind of peer.
+- For true cross-device persistence without relying on browser storage, you need a **persistent always-on peer/relay** somewhere (a VPS, Fly.io/Railway/Render, or similar). The frontend can then point to that relay.
